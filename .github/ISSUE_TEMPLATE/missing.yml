@@ -1,0 +1,34 @@
+name: Request a car, brand or catalog
+description: Something you looked for is not in Auto Sota yet.
+title: "Add: "
+labels: ["missing"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is missing?
+      options:
+        - A car (make, model or year)
+        - A parts brand
+        - A part number
+        - A whole catalog
+    validations:
+      required: true
+  - type: input
+    id: what
+    attributes:
+      label: Which one?
+      description: "For a car: year, make, model and engine. For a part: brand and number."
+      placeholder: "2012 Peugeot 308 1.6 THP, or Bosch 0 986 494 123"
+    validations:
+      required: true
+  - type: input
+    id: vin
+    attributes:
+      label: First 11 characters of the VIN (optional)
+      description: Enough to identify the car. Please do not post the full VIN.
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else?
+      description: What you searched for and what you expected to find.

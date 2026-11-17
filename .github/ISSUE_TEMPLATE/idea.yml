@@ -1,0 +1,25 @@
+name: Suggest a feature
+description: Something that would make the catalog more useful to you.
+title: "Idea: "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: When would you use it?
+      description: What you were trying to do when you needed it.
+  - type: dropdown
+    id: who
+    attributes:
+      label: You are
+      options:
+        - A car owner
+        - A mechanic or workshop
+        - A parts seller
+        - Something else

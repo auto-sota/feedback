@@ -1,0 +1,32 @@
+name: Report wrong data
+description: A part page shows something that is not right.
+title: "Wrong data: "
+labels: ["wrong data"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Link to the page
+      placeholder: "https://autosota.com/part/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - The cross reference (a part listed as equivalent is not)
+        - The cars it fits
+        - Specifications or sizes
+        - The photo
+        - The price
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What should it say?
+      description: Tell us what you see and what is correct. A source helps (the maker's catalog, the box, the part itself).
+    validations:
+      required: true
